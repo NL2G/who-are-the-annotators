@@ -1,0 +1,8 @@
+["manual annotation", "human evaluation", "manual evaluation", "manual annotation", 
+"human raters", "human annotator", "human respondent", "human rating", "manual rating", 
+"crowdsourcer", "crowdsourcing", "hil", "human in the loop", "human-in-the-loop",
+"annotator", "labeler", "human expert", "student worker", 
+"amazon mechanical turk", "prolific", "human perception", "human study", "human benchmark", 
+"human dataset", "human performance", "mturk", "expert annotation", "expert evaluation", 
+"crowdworker", "expert opinion", "human judgement", "human judgment", "manually annotated",
+"manually evaluated", "human annotation" ]
