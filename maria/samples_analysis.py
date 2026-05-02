@@ -126,6 +126,7 @@ def plot_field_distributions(field_value_pairs, fields, field_labels=None):
 
 
 def load_df(path):
+    print(path)
     my_df = pd.read_csv(
         Path(path),
         sep="\t",
@@ -135,19 +136,23 @@ def load_df(path):
         keep_default_na=False
     )
     my_df = my_df.rename(columns=_HEADER_MAP)
+    MORE_FIXES = {
+        "Year": "year",
+        "Venue": "venue",
+        "Human Annotation task type": "task_type",
+        "Quality control & filtering": "post_filtering"}
+    my_df = my_df.rename(columns=MORE_FIXES)
+    print(my_df.columns.tolist())
 
     if my_df.isna().any().any():
         exit('Exiting: NaN values detected in the CSV after loading. Check the data for missing values.')
 
     my_df = my_df.apply(lambda col: col.str.lower() if col.dtype == "object" else col)
-
     my_df["task_type"] = my_df["task_type"].apply(normalize_task_type)
     my_df["expertise_level"] = my_df["expertise_level"].replace(
         {"general language/knowledge task": "general task"})
     my_df["adjudication"] = my_df["adjudication"].replace(
         {"soft labels / distributional labels": "soft labels", "other / mixed": "other/mixed"})
-
-    my_df = my_df.rename(columns={"Year": "year", "Venue": "venue"})
     
     return my_df
 
@@ -404,7 +409,7 @@ def get_gold(my_gold):
     return my_gold
 
 
-def normalize_to_filter(df, filter_df):
+def normalize_venue_to_filter(df, filter_df):
     # --- YEAR ---
     # min_year = filter_df["year"].min()
     # max_year = filter_df["year"].max()
@@ -433,7 +438,8 @@ if __name__ == "__main__":
     parser.add_argument('--gold', help="", default='data/original/double+gold.tsv')
     parser.add_argument('--filter', help="", default='data/original/clean_1603_llm-annotated.tsv')
     # parser.add_argument('--random', help="", default='data/original/random_sample_llm_annotated.tsv')
-    parser.add_argument('--random', help="", default='data/original/Updated Large Scale Exp Random - Sheet1.tsv')
+    # parser.add_argument('--random', help="", default='data/original/Updated Large Scale Exp Random - Sheet1.tsv')
+    parser.add_argument('--random', help="", default='data/original/Updated Large Scale Exp Random.tsv')
     parser.add_argument("--sanity", action="store_true", help="run exploratory data analysis")
     # parser.add_argument('--res', default='res/samples/')
     parser.add_argument('--pics', default='res/pics/report_pct/')
@@ -448,46 +454,39 @@ if __name__ == "__main__":
     save_random = "data/random.tsv"
     save_gold = "data/gold.tsv"
     if os.path.exists(save_filter) and os.path.exists(save_gold) and os.path.exists(save_random):
-        print('Filter exists, loading from', save_filter)
+        print('Gold, Filter and Random exist. Loading.. ')
+        gold_df = load_df(save_gold)
+        filter_df = load_df(save_filter)
+        random_df = load_df(save_random)
     else:
         filter_df = load_df(args.filter)
         filter_df["payment_rate"] = filter_df["payment_rate"].replace(
-            {"not reported": "na", "no": "na"}
-        )
+            {"not reported": "na", "no": "na"})
         filter_df.to_csv(save_filter, sep="\t", index=False)
 
-        if os.path.exists(save_gold):
-            print('Gold exists, loading from', save_gold)
-        else:
-            gold_df = load_df(args.gold)
-            # Slice double+gold, drop Annotator, add Year and Conf to gold and save gold_df for later use
-            gold_df = get_gold(gold_df)
-            gold_df = normalize_to_filter(gold_df, filter_df)
-            gold_df.to_csv(save_gold, sep="\t", index=False)
+        gold_df = load_df(args.gold)
+        # Slice double+gold, drop Annotator, add Year and Conf to gold and save gold_df for later use
+        gold_df = get_gold(gold_df)
+        gold_df = normalize_venue_to_filter(gold_df, filter_df)
+        gold_df.to_csv(save_gold, sep="\t", index=False)
 
-        if os.path.exists(save_random):
-            print('Random exists, loading from', save_random)
-        else:
-            random_df = load_df(args.random)
-            random_df["payment_rate"] = random_df["payment_rate"].replace(
-                {"not reported": "na", "no": "na"}
-            )
-            print(random_df["year"].unique())
-            print(random_df["venue"].unique())
+        random_df = load_df(args.random)
+        random_df["payment_rate"] = random_df["payment_rate"].replace(
+            {"not reported": "na", "no": "na"}
+        )
 
-            random_df = normalize_to_filter(random_df, filter_df)
+        print(random_df["year"].unique())
+        print(random_df["venue"].unique())
 
-            filter_df["year"] = filter_df["year"].replace({"2025": "2025+"})
-            random_df.to_csv(save_random, sep="\t", index=False)
+        random_df = normalize_venue_to_filter(random_df, filter_df)
 
-    args.gold = save_gold
-    args.random = save_random
-    args.filter = save_filter
+        # filter_df["year"] = filter_df["year"].replace({"2025": "2025+"})
+        random_df.to_csv(save_random, sep="\t", index=False)
 
     dfs = {
-        "gold": load_df(args.gold),
-        "filter": load_df(args.filter),
-        "random": load_df(args.random),
+        "gold": gold_df,
+        "filter": filter_df,
+        "random": random_df,
     }
 
     # general exploration and sanity checks
