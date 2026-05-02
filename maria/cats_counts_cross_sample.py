@@ -4,7 +4,7 @@ get a table with hits per each value of each column, to check the data and get a
 This is also useful for sanity checking the data, as it can reveal any unexpected or inconsistent values that may need to be cleaned or corrected before analysis.
 
 USAGE:
-python3 cats_counts.py
+python3 cats_counts_cross_sample.py
 
 """
 
@@ -16,6 +16,8 @@ from pathlib import Path
 from configs import FIELDS, TAX
 from configs import make_dirs
 import pandas as pd
+import matplotlib.pyplot as plt
+
 from reportage_score_tempo import compute_fair_score, compute_blunt_score
 
 from scipy.stats import chi2_contingency
@@ -28,8 +30,8 @@ def cross_sample_value_distributions(df_dict, cols, multilabel, strings, top_k=N
     )
 
     return df.sort_values(
-        ["category", "Δ% (filt-rand)"],
-        key=lambda x: x.abs() if x.name == "Δ% (filt-rand)" else x,
+        ["category", "Δ% (main - random)"],
+        key=lambda x: x.abs() if x.name == "Δ% (main - random)" else x,
         ascending=[True, False]
     )
 
@@ -41,11 +43,11 @@ def get_cross_sample_distribution(df_dict, col, multilabel, strings, top_k=None)
     df_filt = df_dict["filter"]
     df_rand = df_dict["random"]
 
-    print("FILTER types:")
-    print(df_filt[col].apply(type).value_counts())
-
-    print("\nRANDOM types:")
-    print(df_rand[col].apply(type).value_counts())
+    # print("FILTER types:")
+    # print(df_filt[col].apply(type).value_counts())
+    #
+    # print("\nRANDOM types:")
+    # print(df_rand[col].apply(type).value_counts())
 
     # ---------- helper to get counts ----------
     def normalize_multilabel(series):
@@ -114,17 +116,17 @@ def get_cross_sample_distribution(df_dict, col, multilabel, strings, top_k=None)
         rows.append({
             "category": col,
             "value": val,
-            "Δ# (filt-rand)": int(delta_count),
-            "Δ% (filt-rand)": round(delta_pct, 1),
+            "Δ# (main - random)": int(delta_count),
+            "Δ% (main - random)": round(delta_pct, 1),
             "p<0.05": sig
         })
 
     out = pd.DataFrame(rows)
 
     if top_k:
-        out = out.sort_values("Δ# (filt-rand)", ascending=False).head(top_k)
+        out = out.sort_values("Δ# (main - random)", ascending=False).head(top_k)
 
-    out = out.sort_values("Δ% (filt-rand)", key=lambda x: x.abs(), ascending=False)
+    out = out.sort_values("Δ% (main - random)", key=lambda x: x.abs(), ascending=False)
 
     return out
 
@@ -166,6 +168,80 @@ def load_df(path, sanity):
     return df
 
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+def plot_significant_deltas(
+    df,
+    binary_lst=None,
+    positive_values=("yes", "reported", "present", "true", "1"),
+    top_k_per_category=None,
+    exclude_categories=("payment_rate",),
+    min_abs_pct=None,
+    save_as=None
+):
+    figsize = (10, 12)
+    d = df.copy()
+    binary_lst = set(binary_lst or [])
+
+    # normalize value strings for matching
+    d["value_norm"] = d["value"].str.lower().str.strip()
+
+    if exclude_categories:
+        d = d[~d["category"].isin(exclude_categories)]
+
+    # keep only significant
+    d = d[d["p<0.05"] == "*"]
+
+    # optional filter by effect size
+    if min_abs_pct is not None:
+        d = d[d["Δ% (main - random)"].abs() >= min_abs_pct]
+
+    # --- handle binary categories: keep ONLY positive values ---
+    if binary_lst:
+        binary_mask = d["category"].isin(binary_lst)
+
+        d_bin = d[binary_mask & d["value_norm"].isin(positive_values)]
+        d_nonbin = d[~binary_mask]
+
+        d = pd.concat([d_nonbin, d_bin], ignore_index=True)
+
+    # --- top-k per category (after filtering) ---
+    if top_k_per_category is not None:
+        d = (
+            d.assign(abs_pct=d["Δ% (main - random)"].abs())
+             .sort_values(["category", "abs_pct"], ascending=[True, False])
+             .groupby("category")
+             .head(top_k_per_category)
+        )
+
+    # sort globally
+    d = d.sort_values("Δ% (main - random)")
+
+    # labels
+    d["label"] = d["category"] + " | " + d["value"]
+
+    # plot
+    plt.figure(figsize=figsize)
+    plt.barh(d["label"], d["Δ% (main - random)"])
+    plt.axvline(0)
+
+    # annotate
+    for i, v in enumerate(d["Δ% (main - random)"]):
+        plt.text(v, i, f"{v:.1f}", va="center")
+
+    plt.xlabel("Δ% (main - random)")
+    plt.ylabel("")
+    plt.title("")
+    plt.tight_layout()
+    if save_as:
+        plt.savefig(save_as, dpi=300, bbox_inches="tight")
+    plt.show()
+
+    return d
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--filter', help="", default='data/filter.tsv')
@@ -173,12 +249,13 @@ if __name__ == "__main__":
     parser.add_argument('--random', help="", default='data/random.tsv')
     parser.add_argument("--sanity", action="store_true", help="run exploratory data analysis")
     parser.add_argument('--res', default='res/cross_sample/')
+    parser.add_argument('--pics', default='res/pics/cross_sample/')
     parser.add_argument('--logs', default='logs/')
 
     args = parser.parse_args()
     start = time.time()
 
-    make_dirs(logs=args.logs, make_them=[args.res], args=args)
+    make_dirs(logs=args.logs, make_them=[args.res, args.pics], args=args)
 
     dfs = {
         "filter": load_df(args.filter, args.sanity),
@@ -193,6 +270,10 @@ if __name__ == "__main__":
     print(freq_df.shape)
     freq_df.to_csv(f"{args.res}cross_sample_value_distributions.tsv",
                    sep="\t", index=False)
+    top_k = 2
+    save_pic = f"{args.pics}main_rand_divergence_pct.png"
+    plot_significant_deltas(freq_df, binary_lst=TAX["binary"]+TAX['string_digits'],
+                            top_k_per_category=None, save_as=save_pic)
 
     end = time.time()
     elapsed_time = (end - start) / 60
