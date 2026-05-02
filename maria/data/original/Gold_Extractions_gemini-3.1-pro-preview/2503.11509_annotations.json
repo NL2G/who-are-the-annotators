@@ -1,0 +1,98 @@
+{
+  "paper_id": "2503.11509",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2503.11509-1",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Spearman"
+      ],
+      "iaa_value": [
+        "0.68"
+      ],
+      "annotators_per_item": "6",
+      "total_annotators": "13",
+      "total_annotated_items": "100",
+      "items_per_annotator": "100",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "caption similarity",
+      "numerical_evidence": {
+        "annotators_per_item": "obtain six fully annotated sets per task",
+        "total_annotators": "We engage thirteen annotators",
+        "total_annotated_items": "We sample 100 instances from our test set",
+        "items_per_annotator": "inferred from: 'fully annotated sets' of the 100 instances",
+        "iaa_value_0": "The SHR values of 0.68 for caption similarity"
+      }
+    },
+    {
+      "paper_experiment_id": "2503.11509-2",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Spearman"
+      ],
+      "iaa_value": [
+        "0.76"
+      ],
+      "annotators_per_item": "6",
+      "total_annotators": "13",
+      "total_annotated_items": "100",
+      "items_per_annotator": "100",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "image similarity",
+      "numerical_evidence": {
+        "annotators_per_item": "obtain six fully annotated sets per task",
+        "total_annotators": "We engage thirteen annotators",
+        "total_annotated_items": "We sample 100 instances from our test set",
+        "items_per_annotator": "inferred from: 'fully annotated sets' of the 100 instances",
+        "iaa_value_0": "0.76 for image similarity"
+      }
+    }
+  ]
+}

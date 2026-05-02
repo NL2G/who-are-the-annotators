@@ -1,0 +1,132 @@
+{
+  "paper_id": "2024.findings-naacl.197",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.findings-naacl.197-1",
+      "papers_topic": [
+        "Subjective language & social meaning"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "15",
+      "total_annotated_items": "613",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Medium",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "sentiment analysis synthetic text inspection",
+      "numerical_evidence": {
+        "total_annotators": "We recruited 15 participants by reaching out to students in the Computer Science department.",
+        "total_annotated_items": "Table 2: SST-2 Size 613"
+      }
+    },
+    {
+      "paper_experiment_id": "2024.findings-naacl.197-2",
+      "papers_topic": [
+        "Subjective language & social meaning"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "15",
+      "total_annotated_items": "763",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Medium",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "hate speech synthetic text inspection",
+      "numerical_evidence": {
+        "total_annotators": "We recruited 15 participants by reaching out to students in the Computer Science department.",
+        "total_annotated_items": "Table 2: TweetEval (Hate) Size 763"
+      }
+    },
+    {
+      "paper_experiment_id": "2024.findings-naacl.197-3",
+      "papers_topic": [
+        "Subjective language & social meaning"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Human performance"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "1",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Authors",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "ground-truth label annotation for sentiment and hate speech",
+      "numerical_evidence": {
+        "annotators_per_item": "annotated by one of the authors of this paper",
+        "total_annotators": "annotated by one of the authors of this paper"
+      }
+    }
+  ]
+}

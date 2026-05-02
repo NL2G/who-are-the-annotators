@@ -1,0 +1,128 @@
+{
+  "paper_id": "2023.acl-short.140",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.acl-short.140-1",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "6",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "6",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "comparative evaluation of sonnets on theme, poeticness, grammar, emotion, and humanness",
+      "numerical_evidence": {
+        "total_annotators": "six faculty members and students from an academic English department",
+        "items_per_annotator": "In each test, respondents compared six randomly selected pairs of sonnets"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.acl-short.140-2",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "6",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "Yes",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Paid",
+      "payment_rate": "General mention",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "Yes",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "comparative evaluation of sonnets on theme, poeticness, grammar, emotion, and humanness",
+      "numerical_evidence": {
+        "items_per_annotator": "In each test, respondents compared six randomly selected pairs of sonnets"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.acl-short.140-3",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "Yes",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Paid",
+      "payment_rate": "General mention",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "Yes",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "comparative evaluation of ablation sonnets on theme, poeticness, grammar, emotion, and humanness",
+      "numerical_evidence": {}
+    }
+  ]
+}

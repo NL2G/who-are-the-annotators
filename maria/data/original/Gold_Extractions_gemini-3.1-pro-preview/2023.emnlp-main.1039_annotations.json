@@ -1,0 +1,136 @@
+{
+  "paper_id": "2023.emnlp-main.1039",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.emnlp-main.1039-1",
+      "papers_topic": [
+        "Discourse & Pragmatics",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "24",
+      "total_annotated_items": "20626",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Medium",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "Third annotator",
+      "subtask_name": "counter-argument sentence selection",
+      "numerical_evidence": {
+        "annotators_per_item": "Two annotators assess the same triplet, and any discrepancies are resolved by a third.",
+        "total_annotators": "We retained annotators who displayed high consistency with our reference annotations, totaling 24.",
+        "total_annotated_items": "We extracted 20,626 triplets from CMV",
+        "payment_rate": "compensating them at $0.25 per conversation"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.emnlp-main.1039-2",
+      "papers_topic": [
+        "Discourse & Pragmatics",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "5",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rating arguments on a Likert scale across 5 dimensions",
+      "numerical_evidence": {
+        "total_annotators": "Five human judges are asked to rate arguments"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.emnlp-main.1039-3",
+      "papers_topic": [
+        "Discourse & Pragmatics",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Resource creation",
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "500",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Authors",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "counter-argument preference selection",
+      "numerical_evidence": {
+        "total_annotated_items": "It consists of 500 triplets in the format of <original argument, better counter-argument, worse counter-argument>."
+      }
+    }
+  ]
+}

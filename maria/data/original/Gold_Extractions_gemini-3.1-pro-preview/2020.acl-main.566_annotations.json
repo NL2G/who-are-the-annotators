@@ -1,0 +1,49 @@
+{
+  "paper_id": "2020.acl-main.566",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2020.acl-main.566-1",
+      "papers_topic": [
+        "Discourse & Pragmatics",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "700",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "feedback on whether the dialogue succeeded | rate the session about quality/naturalness",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: each user converses with the system and evaluates their own single session",
+        "total_annotated_items": "inferred from: 50 dialogue sessions collected for each of the 7 evaluated agents across 2 domains (Movie, Movie-Ext)"
+      }
+    }
+  ]
+}

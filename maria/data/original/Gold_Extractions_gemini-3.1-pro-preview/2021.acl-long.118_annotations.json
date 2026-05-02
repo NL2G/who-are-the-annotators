@@ -1,0 +1,91 @@
+{
+  "paper_id": "2021.acl-long.118",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2021.acl-long.118-1",
+      "papers_topic": [
+        "QA & information access"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Total agreement"
+      ],
+      "iaa_value": [
+        "70%"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "450",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Authors",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Consensus discussion",
+      "subtask_name": "unanswerable question categorization",
+      "numerical_evidence": {
+        "total_annotated_items": "intensively annotated a total of 450 unanswerable questions from the NQ development set",
+        "iaa_value_0": "the annotators agreed on roughly 70% of the questions"
+      }
+    },
+    {
+      "paper_experiment_id": "2021.acl-long.118-2",
+      "papers_topic": [
+        "QA & information access"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "5",
+      "total_annotated_items": "350",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Native",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "unanswerable question categorization",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: five native speakers for five languages implies 1 annotator per language",
+        "total_annotators": "recruit five native speakers",
+        "total_annotated_items": "350 unanswerable questions across five languages from the TyDi QA development set"
+      }
+    }
+  ]
+}

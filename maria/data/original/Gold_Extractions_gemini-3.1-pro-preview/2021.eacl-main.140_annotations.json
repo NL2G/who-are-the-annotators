@@ -1,0 +1,92 @@
+{
+  "paper_id": "2021.eacl-main.140",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2021.eacl-main.140-1",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "2",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "Other / mixed",
+      "subtask_name": "evaluating instances regarding correctness and solvability",
+      "numerical_evidence": {
+        "annotators_per_item": "Each set was evaluated by an annotator... Each marked instance was reviewed by a second annotator"
+      }
+    },
+    {
+      "paper_experiment_id": "2021.eacl-main.140-2",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Human performance"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Total agreement"
+      ],
+      "iaa_value": [
+        "84%"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "2",
+      "total_annotated_items": "250",
+      "items_per_annotator": "150",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "Target Sense Verification",
+      "numerical_evidence": {
+        "annotators_per_item": "split into two evaluation sets of the size of 150, resulting in a 20% overlap.",
+        "total_annotators": "two evaluation sets... Each evaluation set was assigned to a non-expert annotator",
+        "total_annotated_items": "A random selection of 250 instances",
+        "items_per_annotator": "split into two evaluation sets of the size of 150",
+        "iaa_value_0": "for 42 instances (84%) the annotators agreed"
+      }
+    }
+  ]
+}

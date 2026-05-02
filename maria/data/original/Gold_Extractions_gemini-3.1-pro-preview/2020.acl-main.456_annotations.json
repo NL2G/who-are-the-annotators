@@ -1,0 +1,128 @@
+{
+  "paper_id": "2020.acl-main.456",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2020.acl-main.456-1",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "50",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "evaluating generated headlines for relevance, attractiveness, and language fluency",
+      "numerical_evidence": {
+        "annotators_per_item": "asked three native-speaker annotators for evaluation to score the generated headlines",
+        "total_annotated_items": "We randomly sampled 50 news abstracts from the test set"
+      }
+    },
+    {
+      "paper_experiment_id": "2020.acl-main.456-2",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "50",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "choosing the generated headline that most conforms to the target style",
+      "numerical_evidence": {
+        "total_annotated_items": "inferred from: same sample of 50 news abstracts evaluated in the main human study"
+      }
+    },
+    {
+      "paper_experiment_id": "2020.acl-main.456-3",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "determining the better headline between TitleStylist-Versatile and TitleStylist in terms of attraction",
+      "numerical_evidence": {}
+    }
+  ]
+}

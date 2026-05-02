@@ -1,0 +1,51 @@
+{
+  "paper_id": "2021.naacl-main.99",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2021.naacl-main.99-1",
+      "papers_topic": [
+        "QA & information access"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "5",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "155",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Majority vote",
+      "subtask_name": "comparative evaluation of explanations for trust, understandability, and preference",
+      "numerical_evidence": {
+        "annotators_per_item": "Table 3 summarizes the aggregate statistic of the majority labels, with 5 annotations per question.",
+        "total_annotators": null,
+        "total_annotated_items": "We identified 155 questions that are within the scope of MODULARQA and for which both systems produce a decomposition. We then asked crowdworkers on Amazon Mechanical Turk to annotate them",
+        "items_per_annotator": null,
+        "iaa_value_0": null
+      }
+    }
+  ]
+}

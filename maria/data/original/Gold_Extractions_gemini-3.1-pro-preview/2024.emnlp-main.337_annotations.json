@@ -1,0 +1,53 @@
+{
+  "paper_id": "2024.emnlp-main.337",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.emnlp-main.337-1",
+      "papers_topic": [
+        "Subjective language & social meaning",
+        "Discourse & Pragmatics"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation",
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Cohen's κ"
+      ],
+      "iaa_value": [
+        "0.42 to 0.62"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "5",
+      "total_annotated_items": "2864",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Medium",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Other / mixed",
+      "subtask_name": "fine-grained (anti-)solidarity classification",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: Table 5b indicates 1949 instances with Single annotation, 547 Majority, and 368 Curated.",
+        "total_annotators": "five annotators (all student assistants, with specializations in social science or computer science)",
+        "total_annotated_items": "we annotated 2864 instances with five annotators",
+        "iaa_value_0": "they achieved a pairwise agreement with a Cohen's Kappa of 0.42 on a fine-grained level and 0.62 on a high level",
+        "payment_rate": "totaling an investment of approximately 18k Euro"
+      }
+    }
+  ]
+}

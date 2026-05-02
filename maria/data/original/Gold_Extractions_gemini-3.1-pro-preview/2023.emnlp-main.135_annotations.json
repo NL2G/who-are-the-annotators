@@ -1,0 +1,90 @@
+{
+  "paper_id": "2023.emnlp-main.135",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.emnlp-main.135-1",
+      "papers_topic": [
+        "Linguistics"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "50",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "Silent Sentence Reading Efficiency (SRE) task",
+      "numerical_evidence": {
+        "total_annotators": "We recruited 50 participants via Prolific",
+        "payment_rate": "paid ≈$15.00 per hour"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.emnlp-main.135-2",
+      "papers_topic": [
+        "Linguistics"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "234",
+      "total_annotated_items": "260",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "Silent Sentence Reading Efficiency (SRE) task",
+      "numerical_evidence": {
+        "total_annotators": "234 students in grades 2-8 from a California public school participated in this study",
+        "total_annotated_items": "inferred from: 130 human-generated sentences and 130 GPT-generated sentences"
+      }
+    }
+  ]
+}

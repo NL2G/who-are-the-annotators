@@ -1,0 +1,127 @@
+{
+  "paper_id": "2024.tacl-1.13",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.tacl-1.13-1",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "selecting the superior translation",
+      "numerical_evidence": {}
+    },
+    {
+      "paper_experiment_id": "2024.tacl-1.13-2",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "1000",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "identify the errors in translation and label the category and severity level",
+      "numerical_evidence": {
+        "total_annotated_items": "evaluated the first 1K samples on the Chinese<=>English test sets"
+      }
+    },
+    {
+      "paper_experiment_id": "2024.tacl-1.13-3",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "500",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "decide whether the translation belongs to the hallucination error",
+      "numerical_evidence": {
+        "total_annotated_items": "sampled 500 sentences from each of the English<=>Chinese test sets"
+      }
+    }
+  ]
+}

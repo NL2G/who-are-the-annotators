@@ -1,0 +1,93 @@
+{
+  "paper_id": "2024.findings-emnlp.914",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.findings-emnlp.914-1",
+      "papers_topic": [
+        "Linguistics",
+        "Discourse & Pragmatics"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Human performance"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "15",
+      "total_annotators": "15",
+      "total_annotated_items": "4",
+      "items_per_annotator": "4",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "categorize poetic form",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: 15 literature and poetry scholars categorized four example poems",
+        "total_annotators": "15 literature and poetry scholars",
+        "total_annotated_items": "four example poems",
+        "items_per_annotator": "inferred from: asking them to categorize four example poems"
+      }
+    },
+    {
+      "paper_experiment_id": "2024.findings-emnlp.914-2",
+      "papers_topic": [
+        "Linguistics",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "300",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "check for memorization (overlapping five-gram span)",
+      "numerical_evidence": {
+        "total_annotated_items": "hand-annotations for 300 random poems"
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "paper_id": "2021.acl-long.537",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2021.acl-long.537-1",
+      "papers_topic": [
+        "Compression & reformulation tasks",
+        "Discourse & Pragmatics"
+      ],
+      "human_annotation_type": "Open-ended generation or transformation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "2549",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "Yes",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "Yes",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "short and long abstractive summaries",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: The results in the paper are all still based on the original one-reference setup",
+        "total_annotated_items": "2,549 email threads each with a long and a short summary",
+        "payment_rate": "We fairly pay crowd-source workers $1.37 (for threads with 5 or fewer emails) or $2 (for threads with more than 5 emails) for writing the short and long summaries"
+      }
+    },
+    {
+      "paper_experiment_id": "2021.acl-long.537-2",
+      "papers_topic": [
+        "Compression & reformulation tasks",
+        "Discourse & Pragmatics"
+      ],
+      "human_annotation_type": "Other",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Krippendorff's α"
+      ],
+      "iaa_value": [
+        "0.09 to 0.23"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "100",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rating the salience and faithfulness of model-generated summaries | pairwise comparison",
+      "numerical_evidence": {
+        "annotators_per_item": "collect 3 responses for each example",
+        "total_annotated_items": "we sample 100 examples",
+        "iaa_value_0": "It is around 0.09 to 0.23",
+        "payment_rate": "$0.6 for human rating"
+      }
+    }
+  ]
+}

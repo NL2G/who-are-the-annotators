@@ -1,0 +1,91 @@
+{
+  "paper_id": "2024.acl-long.711",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.acl-long.711-1",
+      "papers_topic": [
+        "Linguistics"
+      ],
+      "human_annotation_type": "Open-ended generation or transformation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "1",
+      "total_annotated_items": "2500",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Native",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "Yes",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "speech transcription with dialectal and borrowed sounds",
+      "numerical_evidence": {
+        "annotators_per_item": "We gave extensive training to an expert transcriber",
+        "total_annotators": "We gave extensive training to an expert transcriber",
+        "total_annotated_items": "a total of 2500 utterance"
+      }
+    },
+    {
+      "paper_experiment_id": "2024.acl-long.711-2",
+      "papers_topic": [
+        "Linguistics"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "4",
+      "total_annotators": "4",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Mixed",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "categorize audio clusters into phonetic classes",
+      "numerical_evidence": {
+        "annotators_per_item": "We asked the four annotators",
+        "total_annotators": "We asked the four annotators (2 native and 2 non-native Arabic speakers)"
+      }
+    }
+  ]
+}

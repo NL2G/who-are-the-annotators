@@ -1,0 +1,90 @@
+{
+  "paper_id": "2025.findings-naacl.425",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.findings-naacl.425-1",
+      "papers_topic": [
+        "Multimodal tasks"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "48",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "125",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Paid",
+      "payment_rate": "General mention",
+      "age_reported": "Yes",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "side-by-side comparison of generated images to match text descriptions",
+      "numerical_evidence": {
+        "total_annotators": "A team of 48 people who were not involved in the creation of the dataset participated in the evaluation",
+        "items_per_annotator": "Each person viewed approximately 125 image pairs."
+      }
+    },
+    {
+      "paper_experiment_id": "2025.findings-naacl.425-2",
+      "papers_topic": [
+        "Multimodal tasks"
+      ],
+      "human_annotation_type": "Open-ended generation or transformation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "13",
+      "total_annotated_items": "2500",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "Mixed",
+      "reported_compensation": "Paid",
+      "payment_rate": "General mention",
+      "age_reported": "Yes",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "creation of complex text descriptions and selection of reference images",
+      "numerical_evidence": {
+        "total_annotators": "We have assembled a team of 13 prompt-engineers",
+        "total_annotated_items": "Thus, 1250 prompts were selected from the 2500 initially created."
+      }
+    }
+  ]
+}

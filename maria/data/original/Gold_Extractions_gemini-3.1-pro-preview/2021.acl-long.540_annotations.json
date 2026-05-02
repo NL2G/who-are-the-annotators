@@ -1,0 +1,50 @@
+{
+  "paper_id": "2021.acl-long.540",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2021.acl-long.540-1",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Cohen's κ"
+      ],
+      "iaa_value": [
+        "0.72"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "3",
+      "total_annotated_items": "1017",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "Majority vote",
+      "subtask_name": "prototypical function frame selection",
+      "numerical_evidence": {
+        "annotators_per_item": "we created the gold standard data set by using the majority label from the three human annotators.",
+        "total_annotators": "we recruited 3 human annotators.",
+        "total_annotated_items": "producing a set of 1,017 concrete physical artifacts... We presented the annotators with the WordNet definition for each term",
+        "iaa_value_0": "The IAA scores were 0.75, 0.72 and 0.69, with an average of κ = 0.72."
+      }
+    }
+  ]
+}

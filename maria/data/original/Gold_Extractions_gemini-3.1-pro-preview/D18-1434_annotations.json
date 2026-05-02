@@ -1,0 +1,49 @@
+{
+  "paper_id": "D18-1434",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "D18-1434-1",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "175",
+      "total_annotated_items": "100",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "question naturalness rating",
+      "numerical_evidence": {
+        "total_annotators": "175 people",
+        "total_annotated_items": "100 such images"
+      }
+    }
+  ]
+}

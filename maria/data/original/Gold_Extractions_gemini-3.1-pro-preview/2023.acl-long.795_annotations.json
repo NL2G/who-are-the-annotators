@@ -1,0 +1,53 @@
+{
+  "paper_id": "2023.acl-long.795",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.acl-long.795-1",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Resource creation",
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Kendall's tau"
+      ],
+      "iaa_value": [
+        "0.52 to 0.61"
+      ],
+      "annotators_per_item": "2",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "7000",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "Yes",
+      "language_proficiency": "Native",
+      "expertise_level": "High",
+      "reported_compensation": "Paid",
+      "payment_rate": "General mention",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "Multidimensional Quality Metric (MQM) error annotation",
+      "numerical_evidence": {
+        "annotators_per_item": "we sample 200 segments for each language and compute the Kendall-tau correlation between the scores given by two annotators.",
+        "total_annotators": null,
+        "total_annotated_items": "we generate an MQM dataset consisting of 7000 annotated sentences, 1400 per language.",
+        "items_per_annotator": null,
+        "iaa_value_0": "For all the languages, we observe high correlation scores of 0.61, 0.57, 0.55, 0.538, and 0.52 for Malayalam, Gujarati, Tamil, Hindi, and Marathi respectively.",
+        "payment_rate": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "paper_id": "2025.emnlp-main.908",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.emnlp-main.908-1",
+      "papers_topic": [
+        "Subjective language & social meaning",
+        "Multimodal tasks"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "50",
+      "total_annotated_items": "370",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "Yes",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "Yes",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rating social bias of attribute pairs",
+      "numerical_evidence": {
+        "annotators_per_item": "Each questionnaire is completed by three different annotators.",
+        "total_annotators": "Among the 50 annotators...",
+        "total_annotated_items": "We employ human annotators to assess 370 attribute pairs",
+        "payment_rate": "hourly compensation of $6.84"
+      }
+    }
+  ]
+}

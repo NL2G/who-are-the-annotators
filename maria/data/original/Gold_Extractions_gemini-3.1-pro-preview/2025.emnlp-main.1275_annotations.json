@@ -1,0 +1,48 @@
+{
+  "paper_id": "2025.emnlp-main.1275",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.emnlp-main.1275-1",
+      "papers_topic": [
+        "Subjective language & social meaning"
+      ],
+      "human_annotation_type": "Other",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "5740",
+      "total_annotated_items": "45416",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "Yes",
+      "language_proficiency": "Native",
+      "expertise_level": "Mixed",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "Yes",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "generation and bias type annotation of stereotypical minimal pairs",
+      "numerical_evidence": {
+        "total_annotators": "inferred from: 370 high-school teachers and 5,370 students",
+        "total_annotated_items": "The total number of sentences in the HESEIA dataset is 45,416"
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "paper_id": "2024.naacl-long.362",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.naacl-long.362-1",
+      "papers_topic": [
+        "Semantics, inference & similarity",
+        "Discourse & Pragmatics"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Total agreement"
+      ],
+      "iaa_value": [
+        "88%"
+      ],
+      "annotators_per_item": "2",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "Medium",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "Yes",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "Expert adjudication",
+      "subtask_name": "verifying document-level self-contradiction and tagging scope and type",
+      "numerical_evidence": {
+        "annotators_per_item": "Each modified document was evaluated by two annotators",
+        "iaa_value_0": "For Q4, 88% of the annotators agree with each other"
+      }
+    },
+    {
+      "paper_experiment_id": "2024.naacl-long.362-2",
+      "papers_topic": [
+        "Semantics, inference & similarity",
+        "Discourse & Pragmatics"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Human performance"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "150",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "Judge then Find task",
+      "numerical_evidence": {
+        "annotators_per_item": "Each document is evaluated by one annotator.",
+        "total_annotated_items": "We construct a balanced set of documents from our dataset with 150 documents in total and evaluate humans' performance on the Judge then Find task."
+      }
+    },
+    {
+      "paper_experiment_id": "2024.naacl-long.362-3",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "75",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "evaluate GPT-3.5 responses",
+      "numerical_evidence": {
+        "total_annotated_items": "Thus, for 75 documents with self-contradictions, we ask GPT3.5 to generate predictions without putting constraints on the output format ... and ask humans to evaluate the responses."
+      }
+    }
+  ]
+}

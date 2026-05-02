@@ -1,0 +1,53 @@
+{
+  "paper_id": "2020.findings-emnlp.38",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2020.findings-emnlp.38-1",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Cohen's κ",
+        "Cohen's κ"
+      ],
+      "iaa_value": [
+        "0.92",
+        "0.85"
+      ],
+      "annotators_per_item": "5",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "2014",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Mixed",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Mixed",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Expert adjudication",
+      "subtask_name": "predicate sense labeling | argument role classification",
+      "numerical_evidence": {
+        "annotators_per_item": "n is five for both the Filter phase and the Select phase.",
+        "total_annotated_items": "We use a second set of 2,014 randomly chosen tasks to evaluate our workflow end-to-end.",
+        "iaa_value_0": "The Cohen's Kappa score between the two experts was 0.92 for predicates",
+        "iaa_value_1": "and 0.85 for arguments",
+        "payment_rate": "paid them US minimum wage ($7.25/hr)"
+      }
+    }
+  ]
+}

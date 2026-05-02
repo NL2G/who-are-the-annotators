@@ -1,0 +1,93 @@
+{
+  "paper_id": "2023.findings-acl.89",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.findings-acl.89-1",
+      "papers_topic": [
+        "Information Extraction"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Cohen's κ"
+      ],
+      "iaa_value": [
+        "0.21"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "3",
+      "total_annotated_items": "1000",
+      "items_per_annotator": "1000",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Medium",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "named entity recognition (person, place, and time)",
+      "numerical_evidence": {
+        "annotators_per_item": "Each sample is assigned to three annotators",
+        "total_annotators": "we ask three students to label 1000 samples",
+        "total_annotated_items": "we ask three students to label 1000 samples as the training set.",
+        "items_per_annotator": "inferred from: 3 students labeled 1000 samples and each sample was assigned to 3 annotators",
+        "iaa_value_0": "The average Kappa value among the annotators is 0.215"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.findings-acl.89-2",
+      "papers_topic": [
+        "Information Extraction"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "2",
+      "total_annotated_items": "881",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "gold annotations generation for NER",
+      "numerical_evidence": {
+        "total_annotators": "let two experts generate the gold annotations.",
+        "total_annotated_items": "we randomly select 881 sentences from the raw dataset"
+      }
+    }
+  ]
+}

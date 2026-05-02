@@ -1,0 +1,54 @@
+{
+  "paper_id": "2025.emnlp-main.1797",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.emnlp-main.1797-1",
+      "papers_topic": [
+        "Discourse & Pragmatics",
+        "Compression & reformulation tasks"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Pearson",
+        "Pearson"
+      ],
+      "iaa_value": [
+        "0.7",
+        "0.72"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "4",
+      "total_annotated_items": "126",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "evaluation of coverage and redundancy of argument summaries",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: For annotator 1 (A1), the judgments for both stances of the third topic are missing, whereas the others (A2-A4) evaluated all three topics.",
+        "total_annotators": "The judgments are carried out by four experienced annotators",
+        "total_annotated_items": "we conduct a human evaluation of 126 generated argument summaries",
+        "iaa_value_0": "average correlation of 0.697 for coverage",
+        "iaa_value_1": "0.722 for redundancy"
+      }
+    }
+  ]
+}

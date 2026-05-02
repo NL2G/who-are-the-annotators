@@ -1,0 +1,52 @@
+{
+  "paper_id": "2023.acl-long.711",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.acl-long.711-1",
+      "papers_topic": [
+        "Subjective language & social meaning",
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Fleiss' κ"
+      ],
+      "iaa_value": [
+        "0.31"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "14",
+      "total_annotated_items": "15000",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "Yes",
+      "annotator_training": "Yes",
+      "language_proficiency": "Native",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "Yes",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "Yes",
+      "nation_residence_reported": "Yes",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Other / mixed",
+      "subtask_name": "online attack detection | attack target identification | language identification",
+      "numerical_evidence": {
+        "annotators_per_item": "Each comment was annotated by three annotators.",
+        "total_annotators": "We recruited a team of 14 annotators through Upwork",
+        "total_annotated_items": "We select 15,000 comments for annotation",
+        "iaa_value_0": "Fleiss’ Kappa is 0.314.",
+        "payment_rate": "Annotators were compensated at a rate of $16 per hour"
+      }
+    }
+  ]
+}

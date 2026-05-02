@@ -1,0 +1,146 @@
+{
+  "paper_id": "2603.03072",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2603.03072-1",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "None of the above"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Cohen's κ",
+        "Other"
+      ],
+      "iaa_value": [
+        "0.35",
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "3",
+      "total_annotated_items": "200",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "checked captions for missing structural elements and judged usefulness",
+      "numerical_evidence": {
+        "annotators_per_item": "One annotator completed the evaluation sheet... The other two annotators each described 30 figures to measure agreement",
+        "total_annotators": "three annotators: one bachelor's student, one PhD student, and one faculty member (all male).",
+        "total_annotated_items": "we analyzed 200 samples from DaTikZ-V3",
+        "iaa_value_0": "unweighted κ = 0.35",
+        "iaa_value_1": "weighted κ = 0.63"
+      }
+    },
+    {
+      "paper_experiment_id": "2603.03072-2",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Open-ended generation or transformation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "1",
+      "total_annotators": "1",
+      "total_annotated_items": "200",
+      "items_per_annotator": "200",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "wrote reference descriptions for scientific figures",
+      "numerical_evidence": {
+        "annotators_per_item": "inferred from: a human annotator wrote reference descriptions for all 200 figures",
+        "total_annotators": "a human annotator wrote reference descriptions",
+        "total_annotated_items": "all 200 figures",
+        "items_per_annotator": "inferred from: a human annotator wrote reference descriptions for all 200 figures"
+      }
+    },
+    {
+      "paper_experiment_id": "2603.03072-3",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Cohen's κ",
+        "Cohen's κ"
+      ],
+      "iaa_value": [
+        "0.81",
+        "0.79"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "9",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "30",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rating figure outputs for textual alignment and image alignment",
+      "numerical_evidence": {
+        "total_annotators": "9 expert annotators (6 PhD, 2 postdoc, 1 faculty member)",
+        "items_per_annotator": "Each annotator rated 30 randomized figures/descriptions",
+        "iaa_value_0": "Cohen’s κ = 0.814 for text",
+        "iaa_value_1": "0.794 for image"
+      }
+    }
+  ]
+}

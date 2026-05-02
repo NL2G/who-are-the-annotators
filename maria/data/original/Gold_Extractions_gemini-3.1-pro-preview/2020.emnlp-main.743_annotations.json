@@ -1,0 +1,49 @@
+{
+  "paper_id": "2020.emnlp-main.743",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2020.emnlp-main.743-1",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "5",
+      "total_annotators": "5",
+      "total_annotated_items": "100",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rate the generated responses in terms of informativeness, relevance, and human-likeness",
+      "numerical_evidence": {
+        "annotators_per_item": "ask 5 undergraduate and graduate students to rate the generated responses... The ratings from different annotators are averaged as the final results.",
+        "total_annotators": "ask 5 undergraduate and graduate students",
+        "total_annotated_items": "We randomly select 100 dialog examples"
+      }
+    }
+  ]
+}

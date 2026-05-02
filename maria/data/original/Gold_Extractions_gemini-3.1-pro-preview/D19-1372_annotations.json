@@ -1,0 +1,48 @@
+{
+  "paper_id": "D19-1372",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "D19-1372-1",
+      "papers_topic": [
+        "Subjective language & social meaning"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Human performance"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "199",
+      "total_annotated_items": "Not reported",
+      "items_per_annotator": "30",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Crowdsourcing",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "General Language/Knowledge task",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Majority vote",
+      "subtask_name": "rating jokes for humor",
+      "numerical_evidence": {
+        "total_annotators": "199 unique participants",
+        "items_per_annotator": "rate an average of 30 jokes each"
+      }
+    }
+  ]
+}

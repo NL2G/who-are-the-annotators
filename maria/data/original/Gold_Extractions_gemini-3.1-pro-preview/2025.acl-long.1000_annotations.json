@@ -1,0 +1,96 @@
+{
+  "paper_id": "2025.acl-long.1000",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.acl-long.1000-1",
+      "papers_topic": [
+        "Semantics, inference & similarity",
+        "Multimodal tasks",
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Fleiss' κ"
+      ],
+      "iaa_value": [
+        "0.67"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "4",
+      "total_annotated_items": "400",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Mixed",
+      "expertise_level": "Medium",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "verb action class categorization, time boundary annotation, and telicity labeling",
+      "numerical_evidence": {
+        "total_annotators": "Four annotators labeled 400 clips",
+        "total_annotated_items": "labeled 400 clips",
+        "iaa_value_0": "Inter-annotator agreement scores 0.67 by Fleiss’ kappa"
+      }
+    },
+    {
+      "paper_experiment_id": "2025.acl-long.1000-2",
+      "papers_topic": [
+        "Semantics, inference & similarity",
+        "Multimodal tasks",
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Human performance"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Fleiss' κ"
+      ],
+      "iaa_value": [
+        "0.8"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "4",
+      "total_annotated_items": "3739",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Mixed",
+      "expertise_level": "Medium",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "multiple-choice QA test on temporal relations",
+      "numerical_evidence": {
+        "total_annotators": "inferred from: Footnote 4 listing the 4 annotators with specific language proficiencies for the test",
+        "total_annotated_items": "dataset of 3,739 QA pairs",
+        "iaa_value_0": "inter-annotator agreement of 0.8 according to Fleiss’ kappa"
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "paper_id": "2023.emnlp-main.196",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2023.emnlp-main.196-1",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Fleiss' κ"
+      ],
+      "iaa_value": [
+        "0.71"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "3",
+      "total_annotated_items": "269",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Majority vote",
+      "subtask_name": "label acceptability evaluation",
+      "numerical_evidence": {
+        "annotators_per_item": "Inter-annotator agreement with 3 annotators.",
+        "total_annotators": "Inter-annotator agreement with 3 annotators.",
+        "total_annotated_items": "inferred from: sum of Majority votes (244 Acceptable + 25 Unacceptable)",
+        "iaa_value_0": "0.71"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.emnlp-main.196-2",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Fleiss' κ"
+      ],
+      "iaa_value": [
+        "0.34"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "3",
+      "total_annotated_items": "241",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Majority vote",
+      "subtask_name": "label precision evaluation",
+      "numerical_evidence": {
+        "annotators_per_item": "Inter-annotator agreement with 3 annotators.",
+        "total_annotators": "Inter-annotator agreement with 3 annotators.",
+        "total_annotated_items": "inferred from: sum of Majority votes (181 Precise + 60 Imprecise)",
+        "iaa_value_0": "0.34"
+      }
+    },
+    {
+      "paper_experiment_id": "2023.emnlp-main.196-3",
+      "papers_topic": [
+        "Semantics, inference & similarity"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Fleiss' κ"
+      ],
+      "iaa_value": [
+        "0.56"
+      ],
+      "annotators_per_item": "3",
+      "total_annotators": "3",
+      "total_annotated_items": "269",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Not reported",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Majority vote",
+      "subtask_name": "comparative evaluation of generated and human labels",
+      "numerical_evidence": {
+        "annotators_per_item": "Inter-annotator agreement with 3 annotators.",
+        "total_annotators": "Inter-annotator agreement with 3 annotators.",
+        "total_annotated_items": "inferred from: sum of 82 (GPT) + 121 (Equal) + 58 (BCN) + 8 (No Majority)",
+        "iaa_value_0": "0.56"
+      }
+    }
+  ]
+}

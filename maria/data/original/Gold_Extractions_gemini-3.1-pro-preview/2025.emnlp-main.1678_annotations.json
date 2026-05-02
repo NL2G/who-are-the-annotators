@@ -1,0 +1,144 @@
+{
+  "paper_id": "2025.emnlp-main.1678",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.emnlp-main.1678-1",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "5",
+      "total_annotators": "5",
+      "total_annotated_items": "100",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Other / mixed",
+      "subtask_name": "evaluation of beauty of sound, beauty of form, and beauty of meaning",
+      "numerical_evidence": {
+        "annotators_per_item": "Each translation hypothesis is scored by 5 annotators",
+        "total_annotators": "Each translation hypothesis is scored by 5 annotators",
+        "total_annotated_items": "translate randomly selected 100 discourse-level translation results",
+        "items_per_annotator": null,
+        "iaa_value_0": null,
+        "payment_rate": null
+      }
+    },
+    {
+      "paper_experiment_id": "2025.emnlp-main.1678-2",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "4",
+      "total_annotators": "4",
+      "total_annotated_items": "758",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "sentence-level translation adequacy evaluation",
+      "numerical_evidence": {
+        "annotators_per_item": "the four experts scored each sentence for adequacy",
+        "total_annotators": "Four native English speakers were invited to participate.",
+        "total_annotated_items": "we employ a constructed dataset of 758 Classical Chinese Sentence-Level Translations to evaluate various translation methods",
+        "items_per_annotator": null,
+        "iaa_value_0": null,
+        "payment_rate": null
+      }
+    },
+    {
+      "paper_experiment_id": "2025.emnlp-main.1678-3",
+      "papers_topic": [
+        "Multilingual & translation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "Not reported",
+      "total_annotated_items": "50",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Authors",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "Not reported",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "No",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "manual evaluation of semantic adequacy, fluency, and elegance",
+      "numerical_evidence": {
+        "annotators_per_item": null,
+        "total_annotators": null,
+        "total_annotated_items": "we manually assess 50 randomly selected poems",
+        "items_per_annotator": null,
+        "iaa_value_0": null,
+        "payment_rate": null
+      }
+    }
+  ]
+}

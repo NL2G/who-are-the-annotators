@@ -1,0 +1,96 @@
+{
+  "paper_id": "2025.acl-long.56",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.acl-long.56-1",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "10",
+      "total_annotators": "10",
+      "total_annotated_items": "252",
+      "items_per_annotator": "252",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rating open-domain traditional-form Chinese poetry",
+      "numerical_evidence": {
+        "annotators_per_item": "Table 6: Reviewers 10",
+        "total_annotators": "Table 6: Reviewers 10",
+        "total_annotated_items": "inferred from: 42 titles * 6 Compared Methods",
+        "items_per_annotator": "inferred from: 42 titles * 6 Compared Methods evaluated by all 10 reviewers",
+        "payment_rate": "Each reviewer is paid 200 RMB for identical-title poem generation challenge and 150 RMB for open-domain traditional-form Chinese poem generation challenge."
+      }
+    },
+    {
+      "paper_experiment_id": "2025.acl-long.56-2",
+      "papers_topic": [
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Ordinal / scalar rating",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "10",
+      "total_annotators": "10",
+      "total_annotated_items": "348",
+      "items_per_annotator": "348",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "rating parallel traditional-form Chinese poetry",
+      "numerical_evidence": {
+        "annotators_per_item": "Table 6: Reviewers 10",
+        "total_annotators": "Table 6: Reviewers 10",
+        "total_annotated_items": "inferred from: 87 titles * 4 Compared Methods",
+        "items_per_annotator": "inferred from: 87 titles * 4 Compared Methods evaluated by all 10 reviewers",
+        "payment_rate": "Each reviewer is paid 200 RMB for identical-title poem generation challenge"
+      }
+    }
+  ]
+}

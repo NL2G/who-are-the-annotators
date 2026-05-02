@@ -1,0 +1,51 @@
+{
+  "paper_id": "2405.15306",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2405.15306-1",
+      "papers_topic": [
+        "Multimodal tasks",
+        "Open-ended generation"
+      ],
+      "human_annotation_type": "Comparative / preference judgments",
+      "intended_use": [
+        "Model output evaluation"
+      ],
+      "guidelines_released": "No",
+      "iaa_metric_name": [
+        "Spearman"
+      ],
+      "iaa_value": [
+        "0.69 to 0.75"
+      ],
+      "annotators_per_item": "6",
+      "total_annotators": "11",
+      "total_annotated_items": "100",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Other",
+      "crowd_qualifications_screening": "NA",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Not reported",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "Yes",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "identify the most and least perceptually similar figure",
+      "numerical_evidence": {
+        "annotators_per_item": "For each input type, we engage six unique expert annotators",
+        "total_annotators": "Our annotator team consists of eleven experts",
+        "total_annotated_items": "select 100 items from SketchFig",
+        "iaa_value_0": "The SHR values of 0.69 for sketches and 0.75 for images indicate a moderate to strong correlation between annotators"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "paper_id": "2025.acl-long.1311",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2025.acl-long.1311-1",
+      "papers_topic": [
+        "Linguistics",
+        "Semantics, inference & similarity",
+        "Information Extraction"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "F1 agreement"
+      ],
+      "iaa_value": [
+        "37.3%"
+      ],
+      "annotators_per_item": "2",
+      "total_annotators": "7",
+      "total_annotated_items": "1301",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Mixed",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "Yes",
+      "language_proficiency": "Mixed",
+      "expertise_level": "High",
+      "reported_compensation": "Paid",
+      "payment_rate": "Specific numeric rate",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "Yes",
+      "disagreement_resolution_adjudication": "Expert adjudication",
+      "subtask_name": "MWE annotation",
+      "numerical_evidence": {
+        "annotators_per_item": "we assigned each sentence to two annotators",
+        "total_annotators": "The annotation was done by two annotators hired through a company and five authors.",
+        "total_annotated_items": "Table 4: Total Sentences 1,301",
+        "iaa_value_0": "The IAA was found to be only 37.3%",
+        "payment_rate": "We paid 154 JPY (roughly 1 USD) per sentence as a reward to the company."
+      }
+    },
+    {
+      "paper_experiment_id": "2025.acl-long.1311-2",
+      "papers_topic": [
+        "Linguistics",
+        "Semantics, inference & similarity",
+        "Information Extraction"
+      ],
+      "human_annotation_type": "Closed-label classification",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Not reported"
+      ],
+      "iaa_value": [
+        "NA"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "2",
+      "total_annotated_items": "384",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Authors",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Native",
+      "expertise_level": "High",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "None",
+      "subtask_name": "MWE type tagging correction",
+      "numerical_evidence": {
+        "total_annotators": "Two authors who are native English speakers conducted this",
+        "total_annotated_items": "We then manually checked all 384 MWEs in the test set"
+      }
+    }
+  ]
+}

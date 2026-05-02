@@ -1,0 +1,51 @@
+{
+  "paper_id": "2024.emnlp-main.1050",
+  "skip": false,
+  "experiments": [
+    {
+      "paper_experiment_id": "2024.emnlp-main.1050-1",
+      "papers_topic": [
+        "Information Extraction"
+      ],
+      "human_annotation_type": "Span-level or structural annotation",
+      "intended_use": [
+        "Resource creation"
+      ],
+      "guidelines_released": "Yes",
+      "iaa_metric_name": [
+        "Cohen's κ"
+      ],
+      "iaa_value": [
+        "0.77"
+      ],
+      "annotators_per_item": "Not reported",
+      "total_annotators": "3",
+      "total_annotated_items": "1093",
+      "items_per_annotator": "Not reported",
+      "human_evaluated_sample": "Not reported",
+      "recruitment": "Authors",
+      "crowd_qualifications_screening": "No",
+      "annotator_training": "No",
+      "language_proficiency": "Not reported",
+      "expertise_level": "High",
+      "reported_compensation": "Free",
+      "payment_rate": "NA",
+      "age_reported": "No",
+      "gender_reported": "No",
+      "nation_origin_reported": "No",
+      "nation_residence_reported": "No",
+      "education_reported": "Yes",
+      "political_orientation_reported": "No",
+      "quality_control_filtering": "No",
+      "disagreement_resolution_adjudication": "Consensus discussion",
+      "subtask_name": "named entity recognition of neurological diseases, interventions, and controls",
+      "numerical_evidence": {
+        "annotators_per_item": "A first batch of 488 annotations was performed by all three annotators. 405 additional randomly selected clinical trials, and 200 non-drug intervention trials were annotated by two annotators",
+        "total_annotators": "The annotation was performed by three independent annotators",
+        "total_annotated_items": "The corpus comprises 1093 clinical trial summaries",
+        "items_per_annotator": null,
+        "iaa_value_0": "The overall agreement was around 0.77 across all rounds and entity types"
+      }
+    }
+  ]
+}
