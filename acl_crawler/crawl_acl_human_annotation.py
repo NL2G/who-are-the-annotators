@@ -1,3 +1,7 @@
+''' 
+This code is based on and adapted from https://github.com/srhthu/ACL-Anthology-Crawler.
+'''
+
 from bs4 import BeautifulSoup
 import requests
 import os
