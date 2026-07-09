@@ -25,6 +25,21 @@ import matplotlib.colors as mcolors
 from scipy.stats import chi2_contingency
 import statsmodels.formula.api as smf
 
+import scienceplots
+
+plt.style.use(["science", "no-latex"])
+
+sns.set_theme(context="talk", style="white")
+
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 18,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14
+})
+
 
 def input_sanity_check_column(df, col, top_k=100):
     vals = df[col].dropna().astype(str)
@@ -89,13 +104,15 @@ def plot_uses_odds(summary_df, color=None, dvar=None, save_as=None):
         ],
         fmt="o",
         capsize=5,
+        linewidth=3,
+        elinewidth=1.5,
         color=color
     )
 
     ax.set_yscale("log")
 
     # reference line at OR = 1
-    ax.axhline(1, linestyle="--", color="gray")  # OR = 1 → no effect
+    ax.axhline(1, linestyle="--", color="gray", linewidth=2)  # OR = 1 → no effect
     # ax.text(
     #     0.01, 1,
     #     "no effect",
@@ -115,10 +132,12 @@ def plot_uses_odds(summary_df, color=None, dvar=None, save_as=None):
         ax.set_ylabel("log(odds ratio)", labelpad=-1)
     ax.set_title("")  # Predictors of QC usage
     for i, val in enumerate(summary_df["OR"]):
-        ax.text(i, val, f"  OR={val:.1f}", ha="left", va="bottom", fontsize=11)
+        ax.text(i, val, f"  OR={val:.1f}", ha="left", va="bottom", fontsize=14)
 
-    ax.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.3)
-
+    ax.grid(True, which="major", linestyle="--", linewidth=0.8, alpha=0.5)
+    ax.tick_params(axis='x', which='major', bottom=True, labelbottom=True)
+    ax.set_xticks(range(len(summary_df.index)))
+    ax.set_xticklabels(summary_df.index)
     plt.xticks(rotation=15)
     plt.tight_layout()
     if save_as:

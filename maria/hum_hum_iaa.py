@@ -486,7 +486,7 @@ def _field_agrees_extended(field: str, val_a: str, val_b: str) -> bool:
 def _krippendorff_alpha_nominal(
     pairs: List[Tuple[str, str]],
 ) -> Optional[float]:
-    """Compute Krippendorff's Alpha for nominal data with 2 coders per unit."""
+    """Compute Krippendorff's Alpha for nominal data with 2 coders per field."""
     n = len(pairs)
     if n < 2:
         return None

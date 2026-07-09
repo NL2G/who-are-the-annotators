@@ -2,7 +2,7 @@
 29 April 2026
 
 USAGE:
-python3 reportage_score_tempo.py
+python3 reportage_score_tempo.py --bars
 
 """
 
@@ -21,6 +21,21 @@ from configs import make_dirs
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
+#
+import scienceplots
+
+plt.style.use(["science", "no-latex"])
+
+sns.set_theme(context="talk", style="white")
+
+plt.rcParams.update({
+    "font.size": 16,
+    "axes.titlesize": 18,
+    "axes.labelsize": 16,
+    "xtick.labelsize": 14,
+    "ytick.labelsize": 14,
+    "legend.fontsize": 14
+})
 
 
 def input_sanity_check_column(df, col, top_k=100):
@@ -233,111 +248,111 @@ def lighten_color(color, amount=0.5):
     return tuple((1 - amount) * x + amount * y for x, y in zip(c, white))
 
 
-def plot_score_trend_with_counts(df, year_col="year", score_col="score",
-                                 main_color=None,
-                                 save_as=None):
-    data = df.copy()
-
-    # --- strict year parsing ---
-    data["year_num"] = pd.to_numeric(data[year_col], errors="coerce")
-    data = data.dropna(subset=["year_num", score_col])
-    data["year_num"] = data["year_num"].astype(int)
-
-    # --- aggregate ---
-    yearly = (
-        data.groupby("year_num")[score_col]
-        .agg(["mean", "std", "count"])
-        .reset_index()
-        .sort_values("year_num")
-    )
-    yearly["sem"] = yearly["std"] / (yearly["count"] ** 0.5)
-
-    # alternative simpler
-    yearly_mean = (
-        data.groupby("year_num", as_index=False)[score_col]
-        .mean()
-        .sort_values("year_num")
-    )
-
-    # --- plot ---
-    fig, ax1 = plt.subplots(figsize=(9, 5))
-
-    sns.lineplot(data=yearly_mean, x="year_num", y=score_col,
-                 color=main_color,
-                 marker="o", ax=ax1)
-    # error bars = SEM Standard Error of the Mean
-    # how uncertain your estimate of the mean is per year, not the variability of individual scores (which is SD)
-    ax1.errorbar(
-        yearly["year_num"],
-        yearly["mean"],
-        yerr=yearly["sem"],
-        fmt="none",
-        ecolor=main_color,
-        capsize=3
-    )
-
-    n_rows = len(data)
-
-    # textbox
-    # ax1.text(
-    #     0.02, 0.95,
-    #     f"Main 'filter' dataset\nTotal annotated tasks: {n_rows}",
-    #     transform=ax1.transAxes,
-    #     fontsize=10,
-    #     verticalalignment="top",
-    #     bbox=dict(boxstyle="round", facecolor="white", alpha=0.7, edgecolor="none")
-    # )
-
-    # # smoothed trend
-    # sns.regplot(
-    #     data=yearly,
-    #     x="year_num",
-    #     y="mean",
-    #     lowess=True,
-    #     scatter=True,
-    #     ax=ax1,
-    #     line_kws={"linewidth": 2}
-    # )
-
-    # # add SD error bars
-    # ax1.errorbar(
-    #     yearly["year_num"],
-    #     yearly["mean"],
-    #     yerr=yearly["std"],
-    #     fmt="none",   # no extra markers
-    #     capsize=3
-    # )
-
-    ax1.set_xlabel("")
-    ax1.set_ylabel("Average score")
-
-    # secondary axis for counts
-    bar_color = lighten_color(main_color, amount=0.2)
-    ax2 = ax1.twinx()
-    ax2.bar(
-        yearly["year_num"],
-        yearly["count"],
-        color=bar_color,
-        alpha=0.3
-    )
-    ax2.set_ylabel("# Annotated tasks")
-
-    # clean spines
-    ax1.spines["top"].set_visible(False)
-    ax2.spines["top"].set_visible(False)
-    ax1.spines["right"].set_visible(False)
-    ax2.spines["left"].set_visible(False)
-
-    plt.title("Reportage score over time with SEM intervals and paper counts")
-    plt.tight_layout()
-    if save_as:
-        plt.savefig(save_as)
-    plt.show()
+# def plot_score_trend_with_counts(df, year_col="year", score_col="score",
+#                                  main_color=None,
+#                                  save_as=None):
+#     data = df.copy()
+#
+#     # --- strict year parsing ---
+#     data["year_num"] = pd.to_numeric(data[year_col], errors="coerce")
+#     data = data.dropna(subset=["year_num", score_col])
+#     data["year_num"] = data["year_num"].astype(int)
+#
+#     # --- aggregate ---
+#     yearly = (
+#         data.groupby("year_num")[score_col]
+#         .agg(["mean", "std", "count"])
+#         .reset_index()
+#         .sort_values("year_num")
+#     )
+#     yearly["sem"] = yearly["std"] / (yearly["count"] ** 0.5)
+#
+#     # alternative simpler
+#     yearly_mean = (
+#         data.groupby("year_num", as_index=False)[score_col]
+#         .mean()
+#         .sort_values("year_num")
+#     )
+#
+#     # --- plot ---
+#     fig, ax1 = plt.subplots(figsize=(9, 5))
+#
+#     sns.lineplot(data=yearly_mean, x="year_num", y=score_col,
+#                  color=main_color,
+#                  marker="o", ax=ax1)
+#     # error bars = SEM Standard Error of the Mean
+#     # how uncertain your estimate of the mean is per year, not the variability of individual scores (which is SD)
+#     ax1.errorbar(
+#         yearly["year_num"],
+#         yearly["mean"],
+#         yerr=yearly["sem"],
+#         fmt="none",
+#         ecolor=main_color,
+#         capsize=3
+#     )
+#
+#     n_rows = len(data)
+#
+#     # textbox
+#     # ax1.text(
+#     #     0.02, 0.95,
+#     #     f"Main 'filter' dataset\nTotal annotated tasks: {n_rows}",
+#     #     transform=ax1.transAxes,
+#     #     fontsize=10,
+#     #     verticalalignment="top",
+#     #     bbox=dict(boxstyle="round", facecolor="white", alpha=0.7, edgecolor="none")
+#     # )
+#
+#     # # smoothed trend
+#     # sns.regplot(
+#     #     data=yearly,
+#     #     x="year_num",
+#     #     y="mean",
+#     #     lowess=True,
+#     #     scatter=True,
+#     #     ax=ax1,
+#     #     line_kws={"linewidth": 2}
+#     # )
+#
+#     # # add SD error bars
+#     # ax1.errorbar(
+#     #     yearly["year_num"],
+#     #     yearly["mean"],
+#     #     yerr=yearly["std"],
+#     #     fmt="none",   # no extra markers
+#     #     capsize=3
+#     # )
+#
+#     ax1.set_xlabel("")
+#     ax1.set_ylabel("Average score")
+#
+#     # secondary axis for counts
+#     bar_color = lighten_color(main_color, amount=0.2)
+#     ax2 = ax1.twinx()
+#     ax2.bar(
+#         yearly["year_num"],
+#         yearly["count"],
+#         color=bar_color,
+#         alpha=0.3
+#     )
+#     ax2.set_ylabel("# Annotated tasks")
+#
+#     # clean spines
+#     ax1.spines["top"].set_visible(False)
+#     ax2.spines["top"].set_visible(False)
+#     ax1.spines["right"].set_visible(False)
+#     ax2.spines["left"].set_visible(False)
+#
+#     plt.title("Reportage score over time with SEM intervals and paper counts")
+#     plt.tight_layout()
+#     if save_as:
+#         plt.savefig(save_as)
+#     plt.show()
 
 
 def compare_trends_bars(df, year_col="year", score_col="score",
-                        main_color="#1f77b4", labels=None,
-                        my_split_by='paper_topic',
+                        main_color="#1f77b4", focus_color=None, labels=None,
+                        my_split_by='paper_topic', bars=True,
                         cat="subjective language & social meaning",
                         save_as=None):
     data = df.copy()
@@ -359,12 +374,11 @@ def compare_trends_bars(df, year_col="year", score_col="score",
     full = agg(data)
 
     subj = agg(data[data["is_focused"]])
-    if "other" not in labels[1]:
+    if "Other" not in labels[1]:
         data["double_focused"] = data[my_split_by].str.contains("resource creation", case=False, na=False)
         nonsubj = agg(data[data["double_focused"]])
     else:
         nonsubj = agg(data[~data["is_focused"]])
-
 
     # --- aggregate for bars ---
     counts = (
@@ -376,49 +390,10 @@ def compare_trends_bars(df, year_col="year", score_col="score",
     counts.columns = ["other", "focus"]
 
     colors = {
-        "all": "#4c4c4c",
-        "focus": "#d62728",
+        "all": "#4D4D4D",   # dark gray
+        "focus": focus_color,  # "#d62728",
         "other": main_color
     }
-
-    fig, ax1 = plt.subplots(figsize=(9, 5))
-    ax2 = ax1.twinx()
-    # --- BACKGROUND: stacked bars ---
-    # bar_color1 = lighten_color(colors["focus"], amount=0.2)
-    ax2.bar(
-        counts.index,
-        counts["focus"],
-        color=colors["focus"],
-        alpha=0.4,
-        label="_nolegend_",
-        zorder=0
-    )
-    # bar_color2 = lighten_color(colors["other"], amount=0.2)
-    ax2.bar(
-        counts.index,
-        counts["other"],
-        bottom=counts["focus"],
-        color=colors["other"],
-        alpha=0.4,
-        label="_nolegend_",
-        zorder=0
-    )
-
-    ax2.set_ylabel("# annotated tasks")
-    years = range(data["year_num"].min(), data["year_num"].max() + 1)
-    ax2.set_xticks(years)
-
-    # --- foreground: trend lines ---
-    sns.lineplot(
-        data=full,
-        x="year_num",
-        y=score_col,
-        ax=ax1,
-        label="all",
-        color=colors["all"],
-        linestyle="--",
-        linewidth=2, zorder=1
-    )
 
     subj_yearly = (
         data[data["is_focused"]]
@@ -430,107 +405,192 @@ def compare_trends_bars(df, year_col="year", score_col="score",
 
     subj_yearly["sem"] = subj_yearly["std"] / (subj_yearly["count"] ** 0.5)
 
+    # sns.set_context("paper")
+    print(plt.rcParams["font.size"])
+
+    fig, ax1 = plt.subplots(figsize=(10, 6))
+
+    if bars:
+        ax2 = ax1.twinx()
+
+        # -------------------------------
+        # background stacked bars
+        # -------------------------------
+        ax2.bar(
+            counts.index,
+            counts["focus"],
+            color=colors["focus"],
+            alpha=0.35,
+            width=0.8,
+            edgecolor="white",
+            label="_nolegend_",
+            zorder=0,
+        )
+
+        ax2.bar(
+            counts.index,
+            counts["other"],
+            bottom=counts["focus"],
+            color=colors["other"],
+            alpha=0.35,
+            edgecolor="white",
+            width=0.8,
+            label="_nolegend_",
+            zorder=0,
+        )
+
+        ax2.set_ylabel("# annotation tasks")
+
+        years = range(data["year_num"].min(), data["year_num"].max() + 1)
+        ax2.set_xticks(years)
+
+    # -------------------------------
+    # overall trend
+    # -------------------------------
+    sns.lineplot(
+        data=full,
+        x="year_num",
+        y=score_col,
+        ax=ax1,
+        label="All annotation tasks",
+        color=colors["all"],
+        linestyle="--",
+        linewidth=3,
+        zorder=3,
+    )
+
+    # -------------------------------
+    # focused category
+    # -------------------------------
     sns.lineplot(
         data=subj_yearly,
         x="year_num",
         y="mean",
         ax=ax1,
-        label=labels[0],  # "socio-linguistic topics",
+        label=labels[0],
         color=colors["focus"],
-        linewidth=2,
-        zorder=1
+        linewidth=3,
+        zorder=4,
     )
 
     ax1.errorbar(
         subj_yearly["year_num"],
         subj_yearly["mean"],
         yerr=subj_yearly["sem"],
-        fmt="none",
+        fmt="o",
+        markersize=4,
         ecolor=colors["focus"],
-        capsize=3,
-        zorder=2
+        color=colors["focus"],
+        elinewidth=1.5,
+        capsize=2,
+        zorder=5,
     )
 
+    # -------------------------------
+    # other categories
+    # -------------------------------
     sns.lineplot(
         data=nonsubj,
         x="year_num",
         y=score_col,
         ax=ax1,
-        label=labels[1],  # "other topics",
+        label=labels[1],
         color=colors["other"],
-        linewidth=2, zorder=1
+        linewidth=3,
+        zorder=3,
     )
 
+    # -------------------------------
+    # cosmetics
+    # -------------------------------
     ax1.set_xlabel("")
-    ax1.set_ylabel("average score")
+    ax1.set_ylabel("Average reportage score")
     ax1.set_title("")
 
     ax1.legend(frameon=False, loc="upper left")
 
     ax1.spines["top"].set_visible(False)
     ax1.spines["right"].set_visible(False)
-    ax2.spines["top"].set_visible(False)
-    ax2.spines["left"].set_visible(False)
-
-    plt.tight_layout()
-
-    if save_as:
-        plt.savefig(save_as, dpi=300, bbox_inches="tight")
-
-    plt.show()
-
-
-def compare_trends(df, year_col="year", score_col="score",
-                   main_color=None,
-                   save_as=None):
-    data = df.copy()
-    data["is_focused"] = data["paper_topic"].str.contains(
-        "subjective language & social meaning",
-        case=False,
-        na=False
+    if bars:
+        ax2.spines["top"].set_visible(False)
+        ax2.spines["left"].set_visible(False)
+    plt.rcParams["xtick.top"] = False
+    ax1.tick_params(axis='both', which='both', length=0)
+    ax1.tick_params(axis='x', pad=8)
+    # ax2.tick_params(axis='both', which='both', length=0)
+    ax1.grid(
+        True,
+        axis="y",
+        linestyle="--",
+        linewidth=0.9,
+        alpha=0.7,
     )
+    # ax2.grid(False)
 
-    group_col = "is_focused"
-
-    data["year_num"] = pd.to_numeric(data[year_col], errors="coerce")
-    data = data.dropna(subset=["year_num", score_col, group_col])
-    data["year_num"] = data["year_num"].astype(int)
-
-    def agg(sub):
-        return (
-            sub.groupby("year_num")[score_col]
-            .mean()
-            .reset_index()
-        )
-
-    full = agg(data)
-    subj = agg(data[data[group_col]])
-    nonsubj = agg(data[~data[group_col]])
-
-    colors = {
-        "all": "#4c4c4c",  # neutral dark gray,
-        "focus": "#d62728",  # red (Matplotlib default red)
-        "other": main_color
-    }
-
-    plt.figure(figsize=(9, 5))
-
-    sns.lineplot(data=full, x="year_num", y=score_col, label="All", color=colors["all"],
-                 linestyle="--", linewidth=2)
-    sns.lineplot(data=subj, x="year_num", y=score_col, label="Socio-linguistic tasks", color=colors["focus"],
-                 linewidth=2)
-    sns.lineplot(data=nonsubj, x="year_num", y=score_col, label="Other tasks",
-                 color=colors["other"], linewidth=2)
-
-    plt.xlabel("year")
-    plt.ylabel("Average score")
-    plt.title("")
-    plt.legend(frameon=False)
     plt.tight_layout()
 
     if save_as:
-        plt.savefig(save_as)
+        if save_as.endswith(".pdf"):
+            plt.savefig(save_as, bbox_inches="tight")
+        else:
+            plt.savefig(save_as, dpi=300, bbox_inches="tight")
+
     plt.show()
+
+
+# def compare_trends(df, year_col="year", score_col="score",
+#                    main_color=None,
+#                    save_as=None):
+#
+#     data = df.copy()
+#     data["is_focused"] = data["paper_topic"].str.contains(
+#         "subjective language & social meaning",
+#         case=False,
+#         na=False
+#     )
+#
+#     group_col = "is_focused"
+#
+#     data["year_num"] = pd.to_numeric(data[year_col], errors="coerce")
+#     data = data.dropna(subset=["year_num", score_col, group_col])
+#     data["year_num"] = data["year_num"].astype(int)
+#
+#     def agg(sub):
+#         return (
+#             sub.groupby("year_num")[score_col]
+#             .mean()
+#             .reset_index()
+#         )
+#
+#     full = agg(data)
+#     subj = agg(data[data[group_col]])
+#     nonsubj = agg(data[~data[group_col]])
+#
+#     colors = {
+#         "all": "#4c4c4c",  # neutral dark gray,
+#         "focus": "#d62728",  # red (Matplotlib default red)
+#         "other": main_color
+#     }
+#
+#     plt.figure(figsize=(9, 5))
+#
+#     sns.lineplot(data=full, x="year_num", y=score_col, label="All", color=colors["all"],
+#                  linestyle="--", linewidth=2)
+#     sns.lineplot(data=subj, x="year_num", y=score_col, label="Sociolinguistic papers", color=colors["focus"],
+#                  linewidth=2)
+#     sns.lineplot(data=nonsubj, x="year_num", y=score_col, label="Other papers",
+#                  color=colors["other"], linewidth=2)
+#     ax = plt.gca()
+#     ax.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.3)
+#     plt.xlabel("year")
+#     plt.ylabel("Average score")
+#     plt.title("")
+#     plt.legend(frameon=False)
+#     plt.tight_layout()
+#
+#     if save_as:
+#         plt.savefig(save_as)
+#     plt.show()
 
 
 def load_df(path, sanity):
@@ -554,6 +614,7 @@ if __name__ == "__main__":
     parser.add_argument('--gold', help="", default='data/gold.tsv')
     parser.add_argument('--random', help="", default='data/random.tsv')
     parser.add_argument("--sanity", action="store_true", help="run exploratory data analysis")
+    parser.add_argument("--bars", action="store_true", help="Plot bars in the background.")
     parser.add_argument('--res', default='res/score_tempo/')
     parser.add_argument('--pics', default='res/pics/score_tempo/')
     parser.add_argument('--logs', default='logs/')
@@ -569,19 +630,16 @@ if __name__ == "__main__":
         "random": load_df(args.random, args.sanity),
     }
 
-    plt.rcParams.update({
-        "font.size": 16,
-        "axes.titlesize": 18,
-        "axes.labelsize": 16,
-        "xtick.labelsize": 14,
-        "ytick.labelsize": 14,
-        "legend.fontsize": 14
-    })
-
     for cur_score in ["fair_score", "blunt_score"]:
         print(f'\n{cur_score.upper()}')
 
         for name, df in dfs.items():
+            if args.bars:
+                out_pic = str(Path(args.pics) / f"uses_{name}_{cur_score}+bars.pdf")
+            else:
+                out_pic = str(Path(args.pics) / f"uses_{name}_{cur_score}.pdf")
+            if name != 'filter':
+                continue
             print(f"\n\t{name}\n")
             if cur_score == "fair_score":
                 df[["fair_reported", "expected", "fair_score"]] = df.apply(compute_fair_score, axis=1)
@@ -598,20 +656,29 @@ if __name__ == "__main__":
 
             # compare_trends(df, year_col="year", score_col="blunt_score",
             #                main_color=SAMPLES_PALETTE[dataset],
-            #                save_as=f"{args.pics}{name}_ss_vs full_blunt_score.png")
+            #                save_as=f"{args.pics}{name}_ss_vs_full_blunt_score.png")
 
+            # Sociopapers: blue  -> "#1f77b4" green -> #2ca02c  (focus: socio)
             compare_trends_bars(df, year_col="year", score_col=cur_score,
-                                main_color=SAMPLES_PALETTE[name],
-                                my_split_by='paper_topic', labels=["socio-linguistic topics", "other topics"],
+                                main_color="#0072B2",  # SAMPLES_PALETTE[name],
+                                focus_color="#009E73",  # green
+                                bars=args.bars,
+                                my_split_by='paper_topic', labels=["Socio-linguistic topics", "Other topics"],
                                 cat="subjective language & social meaning",
-                                save_as=f"{args.pics}ss_{name}_{cur_score}+bars.png")
+                                save_as=out_pic)
+            # Intended use re-coloring:
+            # orange -> "#ff7f0e" + red -> "#d62728"  inten
+            # purple -> "#9467bd" + olive  -> "#bcbd22"
+            # "#0072B2",  # blue "#D55E00",  # orange
 
             compare_trends_bars(df, year_col="year", score_col=cur_score,
-                                main_color=SAMPLES_PALETTE[name],
-                                my_split_by='intended_use', labels=["model output evaluation", "resource creation"],
+                                main_color="#0072B2",  # SAMPLES_PALETTE[name],
+                                focus_color="#D55E00",
+                                bars=args.bars,
+                                my_split_by='intended_use', labels=["Model output evaluation", "Resource creation"],
                                 # my_split_by='intended_use', labels=["model output evaluation", "other purposes"],
                                 cat="model output evaluation",
-                                save_as=f"{args.pics}uses_{name}_{cur_score}+bars.png")
+                                save_as=out_pic)
             dfs[name] = df
 
         mega_df = pd.concat([

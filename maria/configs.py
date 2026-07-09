@@ -13,6 +13,7 @@ I also have my logging setup here
 import os
 import sys
 from datetime import datetime
+from pathlib import Path
 
 _HEADER_MAP = {
     "Paper's topic": "paper_topic",
@@ -168,13 +169,14 @@ def format_args(args):
 def make_dirs(logs=None, make_them=None, args=None):
     for i in make_them:
         if i:
-            os.makedirs(i, exist_ok=True)
-    os.makedirs(logs, exist_ok=True)
+            Path(i).mkdir(parents=True, exist_ok=True)
+    Path(logs).mkdir(parents=True, exist_ok=True)
     current_datetime = datetime.utcnow()
     formatted_datetime = current_datetime.strftime('%Y-%m-%d_%H:%M')
-    script_name = sys.argv[0].split("/")[-1].split(".")[0]
-    log_file = f'{logs}{formatted_datetime.split("_")[0]}_{script_name}.log'
-    sys.stdout = Logger(logfile=log_file)
+    script_name = Path(sys.argv[0]).stem
+    log_file = Path(logs) / f"{formatted_datetime.split('_')[0]}_{script_name}.log"
+
+    sys.stdout = Logger(logfile=str(log_file))
     print(f"\nRun date, UTC: {datetime.utcnow()}")
     if args:
         print(f"Run settings: python3 {sys.argv[0]} {format_args(args)}")

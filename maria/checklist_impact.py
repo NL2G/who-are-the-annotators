@@ -122,7 +122,7 @@ def plot_its(yearly, model, color="#1f77b4", save_as=None):
         fmt="o",
         capsize=3,
         color=color,
-        label="observed"
+        label="Yearly average"
     )
 
     # --- prediction grid ---
@@ -137,7 +137,7 @@ def plot_its(yearly, model, color="#1f77b4", save_as=None):
     pred = model.get_prediction(pred_df).summary_frame()
 
     # --- fitted line ---
-    ax.plot(years, pred["mean"], color=color, linewidth=2, label="Fitted")
+    ax.plot(years, pred["mean"], color=color, linewidth=3, label="Trend estimated by the model")
 
     # --- confidence interval ---
     ax.fill_between(
@@ -145,12 +145,13 @@ def plot_its(yearly, model, color="#1f77b4", save_as=None):
         pred["mean_ci_lower"],
         pred["mean_ci_upper"],
         color=color,
-        alpha=0.2
+        alpha=0.2,
+        label="95% confidence band"
     )
 
     # --- intervention line ---
-    ax.axvline(2022, linestyle="--", color="gray")
-    ax.text(2022 + 0.1, ax.get_ylim()[1], "ACL checklist", va="top", fontsize=9)
+    ax.axvline(2022, linestyle="--", color="gray", linewidth=2)
+    ax.text(2022 + 0.1, ax.get_ylim()[1], "ACL checklist", va="bottom", fontsize=16)
 
     # what would have happened without the checklist
     pred_df_cf = pred_df.copy()
@@ -158,22 +159,27 @@ def plot_its(yearly, model, color="#1f77b4", save_as=None):
 
     cf = model.get_prediction(pred_df_cf).summary_frame()
 
-    ax.plot(years, cf["mean"], linestyle="--", color="black", label="Counterfactual")
+    ax.plot(years, cf["mean"], linestyle="--", color="black",
+            label="Projected trend without the checklist", linewidth=2)
 
     ax.set_xlabel("")
-    ax.set_ylabel("Reportage score")
+    ax.set_ylabel("Average reportage score")
     ax.set_title("")
-    ax.legend(frameon=False)
+    ax.legend(frameon=False, loc="upper left")
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
-    ax.grid(True, linestyle="--", alpha=0.3)
+    ax.set_axisbelow(True)
+    ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
 
     plt.tight_layout()
 
     if save_as:
-        plt.savefig(save_as, dpi=300, bbox_inches="tight")
+        if save_as.endswith(".pdf"):
+            plt.savefig(save_as, bbox_inches="tight")
+        else:
+            plt.savefig(save_as, dpi=300, bbox_inches="tight")
 
     plt.show()
 
@@ -193,11 +199,12 @@ def plot_venues(df_sub, cur_score, save_as=None):
 
     ax.legend(frameon=False)
     ax.set_xlabel("")
-    ax.set_ylabel("Reportage score")
+    ax.set_ylabel("Average Reportage Score")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
-    ax.grid(True, linestyle="--", alpha=0.3)
+    ax.set_axisbelow(True)
+    ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
 
     plt.title("")
     if save_as:
@@ -240,6 +247,7 @@ def its_by_venue(df, cur_score, top_venues, save_as=None):
             yerr=yearly["sem"],
             fmt="o",
             color=venue_color[v],
+            elinewidth=1.5,
             capsize=3,
         )
 
@@ -256,7 +264,7 @@ def its_by_venue(df, cur_score, top_venues, save_as=None):
             years_global,
             pred["mean"],
             color=venue_color[v],
-            linewidth=2
+            linewidth=3
         )
 
         # counterfactual (dashed)
@@ -270,12 +278,12 @@ def its_by_venue(df, cur_score, top_venues, save_as=None):
             cf["mean"],
             linestyle="--",
             color=lighten_color(venue_color[v], amount=0.5),
-            linewidth=1.5
+            linewidth=2
         )
 
     # intervention marker
     ax.axvline(2022, linestyle="--", color="gray")
-    ax.text(2022 + 0.1, ax.get_ylim()[1], "ACL checklist", va="top", fontsize=14)
+    ax.text(2022 + 0.1, ax.get_ylim()[1], "ACL checklist", va="bottom", fontsize=16)
     # ---------------------------
     # MANUAL LEGEND
     # ---------------------------
@@ -290,14 +298,14 @@ def its_by_venue(df, cur_score, top_venues, save_as=None):
         fmt="o",
         color="darkgray",
         capsize=3,
-        label="observed"
+        label="Yearly average"
     )
 
     cf_handle = Line2D(
         [0], [0],
         linestyle="--",
         color="darkgray",
-        label="counterfactual"
+        label="Projected trend without the checklist"
     )
 
     ax.legend(
@@ -307,21 +315,26 @@ def its_by_venue(df, cur_score, top_venues, save_as=None):
     )
 
     ax.set_xlabel("")
-    ax.set_ylabel("Reportage score")
+    ax.set_ylabel("Average reportage score")
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.grid(True, linestyle="--", alpha=0.3)
+
+    ax.set_axisbelow(True)
+    ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
 
     plt.tight_layout()
 
     if save_as:
-        plt.savefig(save_as, dpi=300, bbox_inches="tight")
+        if save_as.endswith(".pdf"):
+            plt.savefig(save_as, bbox_inches="tight")
+        else:
+            plt.savefig(save_as, dpi=300, bbox_inches="tight")
 
     plt.show()
 
 
-RUN = 'random'  # "filter", "gold", "random"
+RUN = 'filter'  # "filter", "gold", "random"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -345,14 +358,14 @@ if __name__ == "__main__":
     }
 
     plt.rcParams.update({
-        "font.size": 16,
+        "font.size": 14,
         "axes.titlesize": 18,
         "axes.labelsize": 16,
         "xtick.labelsize": 14,
         "ytick.labelsize": 14,
         "legend.fontsize": 14
     })
-    for cur_score in ["fair_score", "blunt_score"]:
+    for cur_score in ["fair_score"]:  # , "blunt_score"
         for name, df in dfs.items():
             if name != RUN:
                 continue
@@ -365,7 +378,7 @@ if __name__ == "__main__":
             data = prepare_its(df, score_col=cur_score)
             model = fit_its(data, score_col=cur_score)
             yearly = aggregate_yearly(data, score_col=cur_score)
-            # plot_its(yearly, model, color=SAMPLES_PALETTE[name], save_as=f"{args.pics}its_{name}_{cur_score}.png")
+            plot_its(yearly, model, color=SAMPLES_PALETTE[name], save_as=f"{args.pics}its_{name}_{cur_score}.pdf")
 
             # decomposition by venue
             top_venues = ["acl", "emnlp", "naacl"]
@@ -377,7 +390,7 @@ if __name__ == "__main__":
 
             # ols_venues(df_sub, cur_score, top_venues, save_as=f"{args.pics}ols_venues_{name}_{cur_score}.png")
 
-            its_by_venue(df_sub, cur_score, top_venues, save_as=f"{args.pics}its_by_venue_{name}_{cur_score}.png")
+            its_by_venue(df_sub, cur_score, top_venues, save_as=f"{args.pics}its_by_venue_{name}_{cur_score}.pdf")
 
     end = time.time()
     elapsed_time = (end - start) / 60
