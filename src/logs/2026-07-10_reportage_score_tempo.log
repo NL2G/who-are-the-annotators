@@ -1,0 +1,43 @@
+
+Run date, UTC: 2026-07-10 13:02:23.389665
+Run settings: python3 reportage_score_tempo.py --filter data/filter.tsv --gold data/gold.tsv --random data/random.tsv --bars --res res/score_tempo/ --pics res/pics/score_tempo/ --logs logs/
+	Unique papers: 41, total rows: 72
+	Unique papers: 1603, total rows: 2667
+	Unique papers: 1085, total rows: 1747
+
+FAIR_SCORE
+
+	filter
+
+16.0
+16.0
+year_num dataset      2018      2019     2020      2021      2022      2023    2024      2025
+0           gold       NaN       NaN      NaN       NaN       NaN       NaN     NaN       NaN
+1         filter  0.399183  0.414047  0.44557  0.470913  0.511478  0.531682  0.5276  0.539479
+2         random       NaN       NaN      NaN       NaN       NaN       NaN     NaN       NaN
+
+BLUNT_SCORE
+
+	filter
+
+16.0
+16.0
+year_num dataset      2018      2019      2020     2021      2022     2023      2024      2025
+0           gold       NaN       NaN       NaN      NaN       NaN      NaN       NaN       NaN
+1         filter  0.280423  0.287175  0.318849  0.34211  0.365703  0.37664  0.384952  0.385541
+2         random       NaN       NaN       NaN      NaN       NaN      NaN       NaN       NaN
+Overall Spearman rho (fair vs blunt): 0.932
+
+FAIR vs BLUNT SCORE COMPARISON (does the subjective setup matter?)
+      year     n  mean_fair  mean_blunt   diff  pearson_r
+0     2018   108      0.399       0.280  0.119      0.958
+1     2019   163      0.414       0.287  0.127      0.942
+2     2020   240      0.446       0.319  0.127      0.928
+3     2021   255      0.471       0.342  0.129      0.929
+4     2022   331      0.511       0.366  0.146      0.925
+5     2023   508      0.532       0.377  0.155      0.925
+6     2024   512      0.528       0.385  0.143      0.921
+7     2025   550      0.539       0.386  0.154      0.925
+8  overall  2667      0.504       0.361  0.143      0.929
+
+Total time: 0.3 min

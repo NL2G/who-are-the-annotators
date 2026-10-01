@@ -1,0 +1,61 @@
+
+Run date, UTC: 2026-05-24 18:27:57.621705
+Run settings: python3 checklist_impact.py --filter data/filter.tsv --gold data/gold.tsv --res res/check_impact/filter/ --pics res/pics/check_impact/filter/ --logs logs/
+	Unique papers: 1603, total rows: 2667
+	Unique papers: 41, total rows: 72
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             fair_score   R-squared:                       0.055
+Model:                            OLS   Adj. R-squared:                  0.054
+Method:                 Least Squares   F-statistic:                     51.29
+Date:                Sun, 24 May 2026   Prob (F-statistic):           3.19e-32
+Time:                        20:27:58   Log-Likelihood:                 804.54
+No. Observations:                2667   AIC:                            -1601.
+Df Residuals:                    2663   BIC:                            -1578.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept          0.4955      0.015     33.220      0.000       0.466       0.525
+time               0.0253      0.006      4.075      0.000       0.013       0.038
+post_2022          0.0214      0.017      1.275      0.202      -0.011       0.054
+time:post_2022    -0.0179      0.007     -2.450      0.014      -0.032      -0.004
+==============================================================================
+Omnibus:                       50.086   Durbin-Watson:                   1.584
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               52.667
+Skew:                          -0.343   Prob(JB):                     3.66e-12
+Kurtosis:                       2.950   Cond. No.                         17.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            blunt_score   R-squared:                       0.050
+Model:                            OLS   Adj. R-squared:                  0.048
+Method:                 Least Squares   F-statistic:                     46.26
+Date:                Sun, 24 May 2026   Prob (F-statistic):           3.85e-29
+Time:                        20:28:00   Log-Likelihood:                 1407.6
+No. Observations:                2667   AIC:                            -2807.
+Df Residuals:                    2663   BIC:                            -2784.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept          0.3635      0.012     30.555      0.000       0.340       0.387
+time               0.0227      0.005      4.580      0.000       0.013       0.032
+post_2022          0.0053      0.013      0.398      0.691      -0.021       0.032
+time:post_2022    -0.0163      0.006     -2.800      0.005      -0.028      -0.005
+==============================================================================
+Omnibus:                        2.183   Durbin-Watson:                   1.564
+Prob(Omnibus):                  0.336   Jarque-Bera (JB):                2.172
+Skew:                          -0.042   Prob(JB):                        0.338
+Kurtosis:                       2.889   Cond. No.                         17.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Total time: 0.1 min

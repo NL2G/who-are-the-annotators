@@ -1,0 +1,26 @@
+# Analysis (src/) — enough to rebuild every figure and table from the released TSVs
+pandas>=2.0
+numpy>=1.26
+scipy>=1.11
+statsmodels>=0.14
+matplotlib>=3.8
+seaborn>=0.13
+SciencePlots>=2.1
+tqdm
+
+# Paper collection (acl_crawler/, src/clean_collection.py, extraction/sample_acl_anthology.py)
+requests
+beautifulsoup4
+rapidfuzz
+pdfplumber
+acl-anthology>=1.1.0
+
+# LLM extraction pipeline (extraction/)
+pymupdf
+pydantic>=2
+python-dotenv
+google-genai
+openai>=1.40
+azure-storage-blob
+azure-identity
+sentence-transformers  # embedding-based section retrieval in prompts_v2.py

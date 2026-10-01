@@ -1,0 +1,13 @@
+
+Run date, UTC: 2026-07-10 13:00:19.424801
+Run settings: python3 reportage_score_tempo_gagan.py --filter data/filter.tsv --gold data/gold.tsv --res res/score_tempo/ --pics res/pics/score_tempo/ --logs logs/
+	Unique papers: 41, total rows: 72
+	Unique papers: 1603, total rows: 2667
+
+FAIR_SCORE
+
+	gold
+
+
+	filter
+

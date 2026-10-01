@@ -187,7 +187,7 @@ def make_dirs(logs=None, make_them=None, args=None):
 class Logger(object):
     def __init__(self, logfile=None):
         self.terminal = sys.stdout
-        self.log = open(logfile, "w")
+        self.log = open(logfile, "w", encoding="utf-8")
 
     def __getattr__(self, attr):
         return getattr(self.terminal, attr)
